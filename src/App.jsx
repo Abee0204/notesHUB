@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Notes from './components/Notes';
 import ViewNotes from './components/ViewNotes';
-
+import { Toaster, useToaster } from 'react-hot-toast';
 
 const router = createBrowserRouter(
   [
@@ -39,7 +39,7 @@ export default function App() {
   return (
     <>
     <RouterProvider router={router}/>
-    Hello Ziii
+    <Toaster/>
     </>
   )
 }
