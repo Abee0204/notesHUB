@@ -45,11 +45,11 @@ export const pasteSlice = createSlice({
 
     removeFromPastes: (state, action) => {
       const paste = action.payload;
-      const index = state.pastes.findIndex((item) => item.id === paste.id);
+
+      const index = state.pastes.findIndex((item) => item.id === paste.pasteID);
 
       if (index >= 0) {
         state.pastes.splice(index, 1);
-
         localStorage.setItem("Notes", JSON.stringify(state.pastes));
         toast.success("Removed from pastes");
       } else {
